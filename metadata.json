@@ -1,0 +1,7 @@
+{
+  "name": "Vuma Classic",
+  "description": "Authentic flame-grilled traditional South African cuisine and vibrant dining in Maboneng, 279 Main Street, Johannesburg.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

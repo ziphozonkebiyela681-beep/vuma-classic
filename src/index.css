@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-script: 'Caveat', cursive;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #F8EFE4;
+    background-color: #120406;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+.font-serif-brand {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-script-brand {
+  font-family: 'Pacifico', 'Yellowtail', 'Caveat', cursive;
+}
+
+.font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom flame ambient glow */
+.flame-radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(224, 49, 49, 0.28) 0%, rgba(139, 0, 0, 0.12) 45%, transparent 75%);
+}
+
+.crimson-gradient {
+  background: linear-gradient(135deg, #740208 0%, #9B0F15 50%, #680106 100%);
+}
+
+.crimson-card {
+  background: linear-gradient(180deg, rgba(46, 10, 14, 0.85) 0%, rgba(24, 5, 8, 0.95) 100%);
+  border: 1px solid rgba(220, 38, 38, 0.18);
+}
