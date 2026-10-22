@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Phone, Navigation, ShieldCheck, Flame, Maximize2, X, SlidersHorizontal, Eye, MessageSquare, Sparkles } from 'lucide-react';
+import { MapPin, Clock, Phone, Navigation, ShieldCheck, Flame, Maximize2, X, SlidersHorizontal, Eye, MessageSquare, Sparkles, Facebook } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 import { VumaLogo } from './VumaLogo';
 
@@ -251,6 +251,19 @@ export const LocationSection: React.FC = () => {
                   <span>WhatsApp Order</span>
                 </a>
               </div>
+
+              {/* Official Facebook Page Button */}
+              <a
+                href={RESTAURANT_INFO.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-4 py-2.5 rounded-xl bg-[#1877F2]/15 hover:bg-[#1877F2]/25 border border-[#1877F2]/45 text-blue-200 hover:text-white text-xs font-semibold flex items-center justify-center gap-2.5 transition-all shadow group"
+              >
+                <div className="p-1 rounded-md bg-[#1877F2] text-white">
+                  <Facebook className="w-3.5 h-3.5 fill-white text-white" />
+                </div>
+                <span>Connect on Facebook: <strong className="text-white font-bold group-hover:underline">{RESTAURANT_INFO.facebookName}</strong></span>
+              </a>
             </div>
           </div>
 

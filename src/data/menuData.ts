@@ -9,7 +9,9 @@ export const RESTAURANT_INFO = {
   email: 'jvuma24@gmail.com',
   deliveryNotice: 'We Make Deliveries for Certain Quantity.',
   whatsappNumber: '27729349236',
-  mrDFoodUrl: 'https://www.mrdfood.com/search?query=Vuma+Classic'
+  mrDFoodUrl: 'https://www.mrdfood.com/search?query=Vuma+Classic',
+  facebookName: 'Vuma Classic',
+  facebookUrl: 'https://www.facebook.com/people/Vuma-Classic/61558476957156/'
 };
 
 export const MENU_ITEMS: MenuItem[] = [
@@ -25,7 +27,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spiceLevel: 'Mild',
     servingSize: 'Full Meal with Pap/Rice',
     tags: ['Slow Simmered', 'Soul Food'],
-    image: '/src/assets/images/vuma_real_kitchen_buffet_1791576207874.jpg'
+    image: '/src/assets/images/vuma_beef_stew_yellow_rice_ugqoko_1792685709291.jpg'
   },
   {
     id: 'hardbody-chicken',
@@ -38,7 +40,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spiceLevel: 'Mild',
     servingSize: 'Traditional Portion with Pap',
     tags: ['Free-Range', 'Heritage Staple'],
-    image: '/src/assets/images/vuma_real_kitchen_buffet_1791576207874.jpg'
+    image: '/src/assets/images/vuma_hardbody_chicken_uphuthu_ugqoko_1792685710378.jpg'
   },
   {
     id: 'mogodu',
@@ -130,7 +132,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spiceLevel: 'Mild',
     servingSize: 'Served on Ugqoko + Pap + Salad',
     tags: ['Farmhouse Boerewors', 'Served on Ugqoko'],
-    image: '/src/assets/images/vuma_flame_meat_board_1791572711948.jpg'
+    image: '/src/assets/images/vuma_quarter_wors_meal_ugqoko_1792686841837.jpg'
   },
   {
     id: 'full-wors-meal',
@@ -143,7 +145,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spiceLevel: 'Mild',
     servingSize: 'Full Wors on Ugqoko + Pap + Salad',
     tags: ['Flame Sizzled', 'Served on Ugqoko'],
-    image: '/src/assets/images/vuma_flame_meat_board_1791572711948.jpg'
+    image: '/src/assets/images/vuma_full_wors_meal_ugqoko_1792686841727.jpg'
   },
   {
     id: 'quarter-steak-meal',
@@ -155,7 +157,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spiceLevel: 'Mild',
     servingSize: 'Steak on Ugqoko + Pap + Salad',
     tags: ['Prime Beef', 'Served on Ugqoko'],
-    image: '/src/assets/images/vuma_flame_meat_board_1791572711948.jpg'
+    image: '/src/assets/images/vuma_quarter_steak_meal_ugqoko_1792686843150.jpg'
   },
   {
     id: 'full-steak-meal',
@@ -169,7 +171,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spiceLevel: 'Mild',
     servingSize: 'Full Cut on Ugqoko + Pap + Salad',
     tags: ['Braai Master Cut', 'Served on Ugqoko'],
-    image: '/src/assets/images/vuma_flame_meat_board_1791572711948.jpg'
+    image: '/src/assets/images/vuma_full_steak_meal_ugqoko_1792686844518.jpg'
   },
   {
     id: 'steak-and-wors-meal',
@@ -183,7 +185,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spiceLevel: 'Mild',
     servingSize: 'Ugqoko Feast + Pap + Salad',
     tags: ['Top Seller', 'Served on Ugqoko'],
-    image: '/src/assets/images/vuma_flame_meat_board_1791572711948.jpg'
+    image: '/src/assets/images/vuma_steak_and_wors_combo_ugqoko_1792686845081.jpg'
   },
 
   // DRINKS & EXTRAS

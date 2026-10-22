@@ -1,6 +1,7 @@
 import React from 'react';
 import { Flame, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import { VumaLogo } from './VumaLogo';
+import { RESTAURANT_INFO } from '../data/menuData';
 
 export const Footer: React.FC = () => {
   return (
@@ -118,26 +119,35 @@ export const Footer: React.FC = () => {
             </div>
 
             <div className="pt-2">
-              <span className="text-[11px] text-[#A68F80] block mb-2">Follow the Flame</span>
-              <div className="flex items-center gap-3 text-[#FDE5A9]">
+              <span className="text-[11px] text-[#A68F80] block mb-2 font-medium">Follow the Flame</span>
+              <div className="flex flex-col gap-2">
                 <a
-                  href="https://instagram.com"
+                  href={RESTAURANT_INFO.facebookUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-[#200609] hover:bg-[#340A0F] transition-colors"
-                  aria-label="Follow Vuma Classic on Instagram"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-[#200609] hover:bg-[#340A0F] transition-colors"
+                  className="inline-flex items-center gap-2.5 px-3 py-2 rounded-xl bg-[#1877F2]/15 hover:bg-[#1877F2]/25 border border-[#1877F2]/40 text-xs text-white transition-all shadow-sm group w-fit"
                   aria-label="Follow Vuma Classic on Facebook"
                 >
-                  <Facebook className="w-4 h-4" />
+                  <div className="p-1 rounded-md bg-[#1877F2] text-white">
+                    <Facebook className="w-3.5 h-3.5 fill-white text-white" />
+                  </div>
+                  <span className="text-[#E0E7FF] group-hover:text-white font-medium">
+                    Facebook: <strong className="text-white font-bold tracking-wide">Vuma Classic</strong>
+                  </span>
                 </a>
+
+                <div className="flex items-center gap-2 pt-0.5">
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#200609] hover:bg-[#340A0F] text-[#FDE5A9] hover:text-white transition-colors text-xs border border-red-950/60"
+                    aria-label="Follow Vuma Classic on Instagram"
+                  >
+                    <Instagram className="w-3.5 h-3.5 text-pink-400" />
+                    <span>Instagram</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

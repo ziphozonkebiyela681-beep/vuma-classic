@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, ExternalLink, MessageSquare } from 'lucide-react';
+import { Menu, X, Phone, ExternalLink, MessageSquare, Facebook } from 'lucide-react';
 import { VumaLogo } from './VumaLogo';
 import { RESTAURANT_INFO } from '../data/menuData';
 
@@ -70,6 +70,16 @@ export const Navbar: React.FC = () => {
             >
               <Phone className="w-3.5 h-3.5 text-amber-400" />
               <span>{RESTAURANT_INFO.displayPhone}</span>
+            </a>
+            <a
+              href={RESTAURANT_INFO.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FDE5A9] hover:text-white transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5"
+              title="Visit Vuma Classic on Facebook"
+            >
+              <Facebook className="w-3.5 h-3.5 text-[#1877F2]" />
+              <span>Facebook</span>
             </a>
           </nav>
 
@@ -170,6 +180,15 @@ export const Navbar: React.FC = () => {
               className="w-full py-2.5 text-center text-xs font-semibold bg-[#25D366] text-white rounded-xl flex items-center justify-center gap-2"
             >
               <span>WhatsApp Direct Order</span>
+            </a>
+            <a
+              href={RESTAURANT_INFO.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2.5 text-center text-xs font-semibold bg-[#1877F2]/20 hover:bg-[#1877F2]/30 text-white border border-[#1877F2]/50 rounded-xl flex items-center justify-center gap-2 transition-colors"
+            >
+              <Facebook className="w-3.5 h-3.5 fill-white" />
+              <span>Facebook: Vuma Classic</span>
             </a>
           </div>
         </div>
