@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Flame, Search, UtensilsCrossed, Truck, Phone, Mail, MessageSquare, Sparkles } from 'lucide-react';
+import { Flame, Search, UtensilsCrossed, Truck, Phone, Mail, MessageSquare, Sparkles, ShoppingBag } from 'lucide-react';
 import { MenuItem } from '../types';
 import { MENU_ITEMS, RESTAURANT_INFO } from '../data/menuData';
 
@@ -62,10 +62,40 @@ export const MenuSection: React.FC = () => {
             279 Main Street, Maboneng.
           </p>
 
-          {/* Delivery Notice Badge from the menu board */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#36090D] border border-red-500/40 text-[#FDE5A9] text-xs font-semibold">
-            <Truck className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-            <span>{RESTAURANT_INFO.deliveryNotice}</span>
+          {/* ILLUMINATED DELIVERY NOTICE CARD - LIGHTS UP */}
+          <div className="relative mx-auto max-w-2xl mt-6 p-0.5 rounded-2xl bg-gradient-to-r from-amber-400 via-red-500 to-amber-400 shadow-[0_0_30px_rgba(245,158,11,0.6)]">
+            <div className="bg-gradient-to-r from-[#2B060B] via-[#38080E] to-[#2B060B] rounded-[14px] px-5 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left border border-amber-400/40">
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-gradient-to-br from-amber-500 to-red-600 text-white shadow-[0_0_15px_rgba(245,158,11,0.8)] shrink-0">
+                  <Truck className="w-5 h-5 text-white animate-pulse" />
+                </div>
+                <div>
+                  <div className="flex items-center justify-center sm:justify-start gap-2">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-80" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-300 shadow-[0_0_8px_#F59E0B]" />
+                    </span>
+                    <span className="text-xs sm:text-sm font-black tracking-wide uppercase text-amber-300 drop-shadow-[0_0_10px_rgba(253,224,71,0.9)]">
+                      Deliveries at Vuma are based on the quantity!
+                    </span>
+                  </div>
+                  <p className="text-[11px] sm:text-xs text-[#E8D0BE] mt-0.5 font-medium">
+                    Direct deliveries depend on order quantity. Call or WhatsApp us to verify delivery for your order!
+                  </p>
+                </div>
+              </div>
+              <a
+                href={`https://wa.me/${RESTAURANT_INFO.whatsappNumber}?text=${encodeURIComponent(
+                  'Hello Vuma Classic! 🔥 I would like to inquire about a delivery order based on quantity.'
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 px-3.5 py-1.5 rounded-lg bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold transition-all shadow-md active:scale-95 flex items-center gap-1.5"
+              >
+                <MessageSquare className="w-3.5 h-3.5 fill-white" />
+                <span>Inquire Delivery</span>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -232,35 +262,36 @@ export const MenuSection: React.FC = () => {
         )}
 
         {/* Direct Call & Delivery Contact Box */}
-        <div className="mt-14 p-6 rounded-2xl bg-[#26060A] border border-red-900/60 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-          <div className="space-y-1">
-            <h4 className="text-base font-bold text-white">Call or WhatsApp for Direct Orders & Deliveries</h4>
+        <div className="mt-14 p-6 rounded-2xl bg-[#26060A] border-2 border-red-800/60 shadow-[0_0_25px_rgba(220,38,38,0.3)] flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-red-600/35 via-amber-500/35 to-red-600/35 border border-amber-400/80 shadow-[0_0_15px_rgba(245,158,11,0.5)]">
+              <span className="w-2 h-2 rounded-full bg-amber-300 animate-ping" />
+              <span className="text-xs font-black uppercase text-amber-200 tracking-wide drop-shadow-[0_0_6px_rgba(253,224,71,0.8)]">
+                DELIVERIES AT VUMA ARE BASED ON THE QUANTITY!
+              </span>
+            </div>
+            <h4 className="text-base font-bold text-white">Call or WhatsApp for Direct Orders & Quantity Deliveries</h4>
             <p className="text-xs sm:text-sm text-[#CDB4A2]">
-              {RESTAURANT_INFO.deliveryNotice} Phone: <span className="text-white font-semibold">{RESTAURANT_INFO.phone}</span> • Email: <span className="text-white font-semibold">{RESTAURANT_INFO.email}</span>
+              Phone: <span className="text-white font-semibold">{RESTAURANT_INFO.phone}</span> • Email: <span className="text-white font-semibold">{RESTAURANT_INFO.email}</span> • 279 Main St, Maboneng
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
             <a
-              href={RESTAURANT_INFO.mrDFoodUrl}
+              href={RESTAURANT_INFO.youzimeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-[#FDE5A9] via-[#FDE5A9] to-[#F5C768] text-[#140406] hover:from-white hover:to-[#FDE5A9] transition-all shadow-md flex items-center gap-2 border border-[#FFF2CE]/40"
+              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#FFD369] text-[#140406] hover:bg-white transition-all shadow-md flex items-center gap-2 border border-amber-300/40 active:scale-95"
             >
-              <span>Order on Mr D Food</span>
-            </a>
-            <a
-              href={`tel:${RESTAURANT_INFO.phone}`}
-              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#1C0508] border border-red-800/60 text-[#FDE5A9] hover:text-white transition-colors flex items-center gap-2"
-            >
-              <Phone className="w-4 h-4 text-amber-400" />
-              <span>Call: {RESTAURANT_INFO.displayPhone}</span>
+              <ShoppingBag className="w-4 h-4 text-[#8C070D]" />
+              <span>Order on youzime.co.za</span>
             </a>
             <a
               href={`https://wa.me/${RESTAURANT_INFO.whatsappNumber}?text=Hello%20Vuma%20Classic!%20I%20would%20like%20to%20place%20a%20food%20order.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#25D366] text-white hover:bg-[#20ba5a] transition-colors shadow-md flex items-center gap-2"
+              className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold bg-[#25D366] text-white hover:bg-[#20ba5a] transition-colors shadow-md flex items-center gap-2"
             >
+              <MessageSquare className="w-4 h-4 fill-white" />
               <span>WhatsApp Direct</span>
             </a>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Flame, MapPin, Phone, ExternalLink, MessageSquare, Utensils, Heart, Award, Sparkles } from 'lucide-react';
+import { Flame, MapPin, Phone, ExternalLink, MessageSquare, Utensils, Heart, Award, Sparkles, ShoppingBag } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 
 interface HeroProps {
@@ -52,7 +52,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu }) => {
   const heroImageSrc = '/src/assets/images/vuma_evening_storefront_1792352280835.jpg';
 
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-between pt-24 pb-12 overflow-hidden">
+    <section className="relative min-h-[92vh] flex flex-col justify-between pt-32 sm:pt-36 pb-12 overflow-hidden">
       {/* Background Hero Image with dark crimson & evening ambient lighting scrim */}
       <div className="absolute inset-0 z-0">
         <img
@@ -99,16 +99,17 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu }) => {
               Served on authentic carved wooden <strong className="text-[#FDE5A9] font-semibold">ugqoko</strong> eating boards.
             </p>
 
-            {/* Action Buttons: Mr D Food + Direct Call / WhatsApp + Menu */}
+            {/* Action Buttons: Online Order on Youzime + Direct Call / WhatsApp + Menu */}
             <div className="pt-2 flex flex-wrap items-center gap-3.5">
               <a
-                href={RESTAURANT_INFO.mrDFoodUrl}
+                href={RESTAURANT_INFO.youzimeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 text-sm sm:text-base font-bold text-[#140406] bg-gradient-to-r from-[#FDE5A9] via-[#FCE096] to-[#E9B549] hover:from-white hover:to-[#FCE096] rounded-xl shadow-lg shadow-red-950/50 transition-all duration-200 active:scale-95 flex items-center gap-2 group"
+                className="px-6 py-3.5 text-sm sm:text-base font-bold text-[#140406] bg-gradient-to-r from-[#FDE5A9] via-[#FFD369] to-[#F5C768] hover:from-white hover:to-[#FFD369] rounded-xl shadow-lg shadow-amber-950/50 transition-all duration-200 active:scale-95 flex items-center gap-2 group border border-amber-200/50"
               >
-                <span>Order on Mr D Food</span>
-                <ExternalLink className="w-4 h-4 text-[#7A0309] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ShoppingBag className="w-4 h-4 text-[#8C070D]" />
+                <span>Order on youzime.co.za</span>
+                <ExternalLink className="w-4 h-4 text-[#8C070D] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 
               <a
@@ -143,13 +144,18 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu }) => {
             {/* Quick Ordering & Delivery Strip */}
             <div className="pt-2 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-[#EAD2BF]/90">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>Delivery on Mr D Food</span>
+                <span className="w-2 h-2 rounded-full bg-amber-400" />
+                <span>Online Order on youzime.co.za</span>
               </div>
               <span className="text-red-800" aria-hidden="true">/</span>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>{RESTAURANT_INFO.deliveryNotice}</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-red-600/35 via-amber-500/30 to-red-600/35 border border-amber-400 shadow-[0_0_18px_rgba(245,158,11,0.6)]">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-80" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-300 shadow-[0_0_8px_#F59E0B]" />
+                </span>
+                <span className="font-extrabold text-amber-200 tracking-wide uppercase text-[11px] drop-shadow-[0_0_6px_rgba(253,224,71,0.7)]">
+                  Deliveries at Vuma are based on the quantity!
+                </span>
               </div>
               <span className="text-red-800" aria-hidden="true">/</span>
               <div className="flex items-center gap-2">
@@ -232,13 +238,13 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu }) => {
                       <span className="font-bold text-[#FDE5A9]">{RESTAURANT_INFO.displayPhone}</span>
                     </div>
                     <a
-                      href={RESTAURANT_INFO.mrDFoodUrl}
+                      href={RESTAURANT_INFO.youzimeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#2B080D] hover:bg-[#3D0A11] rounded-xl p-2 border border-red-800/40 text-center transition-colors block"
                     >
-                      <span className="block text-[#A89080] text-[10px] uppercase font-semibold">Online Delivery</span>
-                      <span className="font-bold text-amber-300">Order Mr D Food</span>
+                      <span className="block text-[#A89080] text-[10px] uppercase font-semibold">Online Order</span>
+                      <span className="font-bold text-amber-300">youzime.co.za</span>
                     </a>
                   </div>
                 </div>

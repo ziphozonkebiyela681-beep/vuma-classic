@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { Flame, MapPin, Phone, Mail, Facebook, ShoppingBag } from 'lucide-react';
 import { VumaLogo } from './VumaLogo';
 import { RESTAURANT_INFO } from '../data/menuData';
 
@@ -103,18 +103,20 @@ export const Footer: React.FC = () => {
                 <span>jvuma24@gmail.com</span>
               </a>
               <a
-                href="https://www.mrdfood.com/search?query=Vuma+Classic"
+                href={RESTAURANT_INFO.youzimeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-[#FDE5A9] hover:text-white font-semibold pt-1"
+                className="inline-flex items-center gap-1.5 text-xs text-amber-300 hover:text-white font-semibold pt-1"
               >
-                <span>🛵 Available on Mr D Food</span>
+                <ShoppingBag className="w-3.5 h-3.5 text-amber-400" />
+                <span>Order Online on youzime.co.za</span>
               </a>
             </div>
 
             <div className="pt-1">
-              <span className="text-[11px] text-amber-300 block font-medium">
-                🚚 We Make Deliveries for Certain Quantity
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-400/15 border border-amber-400/40 text-[11px] text-amber-200 font-extrabold shadow-[0_0_12px_rgba(245,158,11,0.4)]">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-300 animate-ping" />
+                <span>🚚 Deliveries at Vuma are based on the quantity!</span>
               </span>
             </div>
 
@@ -135,19 +137,6 @@ export const Footer: React.FC = () => {
                     Facebook: <strong className="text-white font-bold tracking-wide">Vuma Classic</strong>
                   </span>
                 </a>
-
-                <div className="flex items-center gap-2 pt-0.5">
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#200609] hover:bg-[#340A0F] text-[#FDE5A9] hover:text-white transition-colors text-xs border border-red-950/60"
-                    aria-label="Follow Vuma Classic on Instagram"
-                  >
-                    <Instagram className="w-3.5 h-3.5 text-pink-400" />
-                    <span>Instagram</span>
-                  </a>
-                </div>
               </div>
             </div>
           </div>

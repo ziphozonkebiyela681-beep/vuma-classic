@@ -7,9 +7,9 @@ export const RESTAURANT_INFO = {
   phone: '+27 72 934 9236',
   displayPhone: '072 934 9236',
   email: 'jvuma24@gmail.com',
-  deliveryNotice: 'We Make Deliveries for Certain Quantity.',
+  deliveryNotice: 'Deliveries at Vuma are based on the quantity!',
   whatsappNumber: '27729349236',
-  mrDFoodUrl: 'https://www.mrdfood.com/search?query=Vuma+Classic',
+  youzimeUrl: 'https://youzime.co.za',
   facebookName: 'Vuma Classic',
   facebookUrl: 'https://www.facebook.com/people/Vuma-Classic/61558476957156/'
 };

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Phone, Navigation, ShieldCheck, Flame, Maximize2, X, SlidersHorizontal, Eye, MessageSquare, Sparkles, Facebook } from 'lucide-react';
+import { MapPin, Clock, Phone, Navigation, ShieldCheck, Flame, Maximize2, X, SlidersHorizontal, Eye, MessageSquare, Sparkles, Facebook, ShoppingBag } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/menuData';
 import { VumaLogo } from './VumaLogo';
 
@@ -221,13 +221,13 @@ export const LocationSection: React.FC = () => {
             {/* Direct Contact & Order Buttons */}
             <div className="pt-4 border-t border-red-900/70 space-y-2.5">
               <a
-                href={RESTAURANT_INFO.mrDFoodUrl}
+                href={RESTAURANT_INFO.youzimeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-[#FDE5A9] via-[#FDE5A9] to-[#F5C768] hover:from-white hover:to-[#FDE5A9] text-[#140406] text-xs font-black flex items-center justify-center gap-2 transition-all shadow-md active:scale-95 border border-[#FFF2CE]/40"
+                className="w-full px-4 py-3 rounded-xl bg-gradient-to-r from-[#FDE5A9] via-[#FFD369] to-[#F5C768] hover:from-white hover:to-[#FFD369] text-[#140406] text-xs font-black flex items-center justify-center gap-2 transition-all shadow-md active:scale-95 border border-amber-200/50"
               >
-                <span>Order on Mr D Food</span>
-                <Navigation className="w-3.5 h-3.5 text-[#8C070D]" />
+                <ShoppingBag className="w-4 h-4 text-[#8C070D]" />
+                <span>Order Online on youzime.co.za</span>
               </a>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">

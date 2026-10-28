@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, ExternalLink, MessageSquare, Facebook } from 'lucide-react';
+import { Menu, X, Phone, ExternalLink, MessageSquare, Facebook, ShoppingBag, Truck } from 'lucide-react';
 import { VumaLogo } from './VumaLogo';
 import { RESTAURANT_INFO } from '../data/menuData';
 
@@ -23,11 +23,32 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#140406]/95 backdrop-blur-md shadow-xl border-b border-red-950/60 py-2.5'
-          : 'bg-gradient-to-b from-[#120406]/95 via-[#120406]/70 to-transparent py-3.5'
+          ? 'bg-[#140406]/98 backdrop-blur-md shadow-2xl border-b border-red-950/70'
+          : 'bg-gradient-to-b from-[#120406]/98 via-[#120406]/80 to-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ILLUMINATED DELIVERY NOTICE BAR - LIGHTS UP */}
+      <div className="bg-gradient-to-r from-[#63060C] via-[#B8141F] to-[#63060C] border-b border-amber-400/60 py-1 px-4 shadow-[0_0_22px_rgba(245,158,11,0.5)]">
+        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-center text-xs font-bold text-amber-200">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-80" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-300 shadow-[0_0_8px_#F59E0B]" />
+          </span>
+          <Truck className="w-3.5 h-3.5 text-amber-300 shrink-0 animate-pulse" />
+          <span className="tracking-wide uppercase text-white font-black drop-shadow-[0_0_8px_rgba(253,224,71,0.9)]">
+            Deliveries at Vuma are based on the quantity!
+          </span>
+          <span className="hidden sm:inline text-amber-300/90 font-medium">
+            (WhatsApp 072 934 9236 to confirm order quantity)
+          </span>
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-80" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-300 shadow-[0_0_8px_#F59E0B]" />
+          </span>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
         <div className="flex items-center justify-between gap-8">
           {/* ZONE 1: Brand Wordmark (Single text/brand element) */}
           <a
@@ -97,14 +118,16 @@ export const Navbar: React.FC = () => {
               <span>WhatsApp Order</span>
             </a>
 
-            {/* Primary Action Button: Order on Mr D Food */}
+            {/* Primary Action Button: Order Online on Youzime */}
             <a
-              href={RESTAURANT_INFO.mrDFoodUrl}
+              href={RESTAURANT_INFO.youzimeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-bold text-[#140406] bg-gradient-to-r from-[#FDE5A9] via-[#FDE5A9] to-[#F5C768] hover:from-white hover:to-[#FDE5A9] rounded-xl shadow-md transition-all active:scale-95 whitespace-nowrap shrink-0 border border-[#FFF2CE]/40"
+              className="hidden sm:inline-flex items-center justify-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-bold text-[#140406] bg-gradient-to-r from-[#FDE5A9] via-[#FFD369] to-[#F5C768] hover:from-white hover:to-[#FFD369] rounded-xl shadow-md transition-all active:scale-95 whitespace-nowrap shrink-0 border border-amber-300/40"
+              title="Order food online on youzime.co.za"
             >
-              <span>Mr D</span>
+              <ShoppingBag className="w-3.5 h-3.5 text-[#8C070D]" />
+              <span>Order on Youzime</span>
               <ExternalLink className="w-3.5 h-3.5 text-[#8C070D]" />
             </a>
 
@@ -159,12 +182,13 @@ export const Navbar: React.FC = () => {
 
           <div className="pt-2 flex flex-col gap-2.5">
             <a
-              href={RESTAURANT_INFO.mrDFoodUrl}
+              href={RESTAURANT_INFO.youzimeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3 text-center font-bold text-[#140406] bg-gradient-to-r from-[#FDE5A9] to-[#F5C768] rounded-xl shadow-md flex items-center justify-center gap-2"
+              className="w-full py-3 text-center font-bold text-[#140406] bg-[#FFD369] hover:bg-[#FDE5A9] rounded-xl shadow-md flex items-center justify-center gap-2"
             >
-              <span>Order on Mr D Food</span>
+              <ShoppingBag className="w-4 h-4 text-[#8C070D]" />
+              <span>Order Online on youzime.co.za</span>
               <ExternalLink className="w-4 h-4 text-[#8C070D]" />
             </a>
             <a
